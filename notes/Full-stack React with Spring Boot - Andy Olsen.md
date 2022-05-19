@@ -29,13 +29,21 @@
                 - Spring Boot
             - Persistence
                 - H2
-                    - for in
+                    - for in-memory storage
 
 #### 1.2 Understanding REST Services
-- 
-    - 
-        - 
-    - 
+- Definition of REST
+    - ![](img/01003.jpg)
+        - user interacts with a website
+        - website needs to change state
+        - website react with new state after user interacts
+    - ![](img/01004.jpg)
+        - ![](img/01005.jpg)
+            - HTTP actions
+                - GET, POST, PUT, DELETE
+            - ![](img/01006.jpg)
+        - ![](img/01007.jpg)
+        - ![](img/01008.jpg)
         - 
 - 
     - 
