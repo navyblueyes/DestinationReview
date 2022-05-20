@@ -41,42 +41,29 @@
         - ![](img/01005.jpg)
             - HTTP actions
                 - GET, POST, PUT, DELETE
-            - ![](img/01006.jpg)
-        - ![](img/01007.jpg)
-        - ![](img/01008.jpg)
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+                - ![](img/01006.jpg)
+            - ![](img/01007.jpg)
+            - ![](img/01008.jpg)
+        - ![](img/01009.jpg)
+            - Parts of the HTTP response
+                - location - lets you know where change was made
+                - ![](img/01010.jpg)
+            - Status Codes
+                - ![](img/01011.jpg)
+
 #### 1.3 Creating Client-side Content
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
-#### 1.4 Tooling Up
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- ![](img/01012.jpg)
+    - Frontend that will communicate with backend VIA rest
+- HTML
+    - ![](img/01013.jpg)
+- CSS
+    - ![](img/01014.jpg)
+- Javascript
+    - ![](img/01015.jpg)
+        - ![](img/01016.jpg)
+        - ![](img/01017.jpg)
+        - ![](img/01018.jpg)
+
 ### Lesson 2: Creating and Running Spring Boot Applications
 #### 2.1 Creating a Simple Application Using Spring Boot CLI
 - 
