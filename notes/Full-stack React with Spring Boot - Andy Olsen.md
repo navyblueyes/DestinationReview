@@ -129,14 +129,11 @@
 - OVerview
     - ![](img/02030.jpg)
         - ![](img/02031.jpg)
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
-
+    - it will autocomplete the property names and show the default values
+        - ![](img/02032.jpg)
+            - don't change it if you like the default value
+- Testing
+    - ![](img/02033.jpg)
 
 ### Lesson 3: Spring Boot Components and Beans
 #### 3.1 Defining Component Classes and Accessing Beans
