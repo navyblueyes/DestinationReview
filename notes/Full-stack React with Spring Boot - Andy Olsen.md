@@ -84,42 +84,60 @@
     - ![](img/02004.jpg)
 - To run...
     - ![](img/02009.jpg)
-        - 
 
 #### 2.2 Creating a Web Application Using Spring Boot CLI
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Getting Started
+    - ![](img/02010.jpg)
+        - ![](img/02011.jpg)
+    - create a maven dependency web app (dweb)
+        - ![](img/02012.jpg) 
+            - ![](img/02013.jpg)
+    - Maven web project includes `static` and `template`
+        - ![](img/02014.jpg)
+    - static files go into static folder
+        - ![](img/02015.jpg)
+    - Run the app after filling up static folder
+        - ![](img/02016.jpg)
+    - Test
+        - ![](img/02017.jpg)
+
 #### 2.3 Creating a Web Application Using IntelliJ
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Static Web App
+    - new project
+        - ![](img/02018.jpg)
+            - ![](img/02021.jpg)
+    - select spring initializer
+        - ![](img/02019.jpg)
+    - artifact is the project name
+        - ![](img/02020.jpg)
+    - observe created project
+        - ![](img/02022.jpg)
+        - ![](img/02023.jpg)
+            - ![](img/02024.jpg)
+    - build --> run
+        - ![](img/02025.jpg)
+
 #### 2.4 Implementing a Simple REST Service
+- Overview
+    - ![](img/02026.jpg)
+        - 
+    - ![](img/02027.jpg)
+        - ![](img/02028.jpg)
+        - ![](img/02029.jpg)
+
+#### 2.5 Understanding Application Properties
+- OVerview
+    - ![](img/02030.jpg)
+        - ![](img/02031.jpg)
+    - 
+        - 
 - 
     - 
         - 
     - 
         - 
-- 
-    - 
-        - 
-    - 
-        - 
-2.5 Understanding Application Properties
+
+
 ### Lesson 3: Spring Boot Components and Beans
 #### 3.1 Defining Component Classes and Accessing Beans
 - 
@@ -132,6 +150,7 @@
         - 
     - 
         - 
+
 #### 3.2 Understanding Bean Scope and Initialization
 - 
     - 
@@ -143,6 +162,7 @@
         - 
     - 
         - 
+
 #### 3.3 Autowiring
 - 
     - 
@@ -154,6 +174,7 @@
         - 
     - 
         - 
+
 #### 3.4 Using Spring Expression Language (SpEL)
 - 
     - 
@@ -165,6 +186,7 @@
         - 
     - 
         - 
+
 #### 3.5 Working with Command-Line Arguments
 - 
     - 
@@ -176,6 +198,7 @@
         - 
     - 
         - 
+
 ### Lesson 4: Configuration Classes
 #### 4.1 Defining a Configuration Class and Beans
 - 
