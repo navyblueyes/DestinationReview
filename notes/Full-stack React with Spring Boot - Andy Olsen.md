@@ -174,16 +174,46 @@
             - ![](img/03012.jpg)
 
 #### 3.2 Understanding Bean Scope and Initialization
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Basics
+    - Prototype vs Singleton
+        - Prototype creates a separate instance with every invocation
+        - Single creates only once instance and checks for that instance with every invocation
+    - Default
+        - singleton
+            - ![](img/03013.jpg)
+- Singleton-Scope Bean
+    - ![](img/03014.jpg)
+        - ![](img/03015.jpg)
+            - suppose to store the instance value `id` and `printf()` it
+            - if another instance is created... `nextId++` should be triggered giving the next instance a new `id`
+        - ![](img/03016.jpg)
+            - within the `Application.main` class, we call `demoSingleton` with the context of `SpringApplication.run(Application.class)`
+            - inside of `demoSingleton` .. we attempt to run `ctx` with `getBean()` three times
+        - ![](img/03017.jpg)
+    - If you have a tedious bean to generate (20min+)...
+        - lazy initiation
+            - Purpose
+                - Bean generation (unless specified) will always occur during `SpringApplication.run()`
+                - if you want to avoid a long application startup and can spare the guilty bean...
+                    - you can generate bean later ... aka... lazy load it with `@Lazy`
+                        - will be generate ONLY when called
+            - implementation
+                - ![](img/03018.jpg)
+                - ![](img/03019.jpg)
+- Different Scope
+    - ![](img/03020.jpg)
+        - dictate where the data of bean is stored...
+            - `"request"` will store data only during request and will be dumped after successful transmission
+            - `"session"` storing data only during allotted user time, 
+                - banks may limit it to 30 minutes and sign you out
+            - `"application"` stores data during the lifetime of webapp
+                - if it is restarted... loses that data
+- Prototype Bean
+    - Application
+        - ![](img/03021.jpg)
+    - Prototype Class
+        - ![](img/03023.jpg)
+            - ![](img/03022.jpg)
 
 #### 3.3 Autowiring
 - 
