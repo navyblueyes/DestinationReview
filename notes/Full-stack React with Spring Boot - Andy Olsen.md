@@ -216,16 +216,30 @@
             - ![](img/03022.jpg)
 
 #### 3.3 Autowiring
-- 
+- Overview
+    - Will setup a dependency between service and repository
+        - ![](img/03024.jpg)
+    - Will need to qualify the dependency so that the Repo knows where to store data
+        - ![](img/03025.jpg)
+- BankRepository
+    - ![](img/03028.jpg)
+- BankService
+    - ![](img/03029.jpg)
+- Injecting Dependencies into a Constructor
     - 
         - 
     - 
         - 
-- 
+- Injecting Dependencies into a Constructor
     - 
         - 
     - 
         - 
+- Qualifying Autowiring
+    - ![](img/03026.jpg)
+- Optional Autowiring
+    - Avoid runtime error by making the maybe-not-there repo optional
+        - ![](img/03027.jpg)
 
 #### 3.4 Using Spring Expression Language (SpEL)
 - 
