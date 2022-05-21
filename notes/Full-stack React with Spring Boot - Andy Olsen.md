@@ -137,16 +137,41 @@
 
 ### Lesson 3: Spring Boot Components and Beans
 #### 3.1 Defining Component Classes and Accessing Beans
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Basics
+    - ![](img/03001.jpg)
+        - Class component
+            - automatically creates an instance
+        - bean
+            - an instance
+- Components
+    - ![](img/03002.jpg)
+        - `@Component`
+            - used to designate classes that we want an instance of
+        - `@Service`
+            - used to designate classes that we want an business instance of
+        - `@Respository`
+            - used to designate classes that we want to have data access
+        - `@Controller`
+            - used to designate classes that we want to respond to HTTP req/res
+        - `@RESTController`
+            - used to designate classes that we want to respond to HTTP req/res
+- Demo
+    - ![](img/03004.jpg)
+        - ![](img/03003.jpg)
+            - component will create a bean/instance with a name in a lower case
+            - `MyComponent` component will create a bean/instance with the name `mycomponent`
+    - ![](img/03005.jpg)
+        - ![](img/03006.jpg)
+            - when this runs... beans are stored in the application context
+    - ![](img/03007.jpg)
+        - ![](img/03008.jpg)
+            - created a reference within main class of the Application...
+                - that references the get function of the `ctx` of the running `Application.class`
+                    - and gets the `mycomponent` bean of the `MyComponent.class`
+    - ![](img/03009.jpg)
+        - ![](img/03010.jpg)
+            - ![](img/03011.jpg)
+            - ![](img/03012.jpg)
 
 #### 3.2 Understanding Bean Scope and Initialization
 - 
