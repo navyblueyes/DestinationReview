@@ -66,16 +66,26 @@
 
 ### Lesson 2: Creating and Running Spring Boot Applications
 #### 2.1 Creating a Simple Application Using Spring Boot CLI
-- 
-    - 
+- Getting Started
+    - ![](img/01019.jpg)
+- Creating a spring boot app
+    - ![](img/02001.jpg)
+- Maven project
+    - ![](img/02002.jpg)
+        - `pom.xml` manifest of all dependencies
+            - ![](img/02005.jpg)
+            - ![](img/02006.jpg)
+                - Parent for common dependencies
+    - ![](img/02003.jpg)
+        - `src` holds all the application 
+            - ![](img/02007.jpg)
+            - ![](img/02008.jpg)
+            - 
+    - ![](img/02004.jpg)
+- To run...
+    - ![](img/02009.jpg)
         - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+
 #### 2.2 Creating a Web Application Using Spring Boot CLI
 - 
     - 
