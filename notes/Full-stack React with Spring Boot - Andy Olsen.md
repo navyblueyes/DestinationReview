@@ -255,18 +255,46 @@
     - ![](img/03037.jpg)
 - If you want to inject the value of a variable, i.e. value of `name`
     - ![](img/03038.jpg)
-- If you want to inject the value of a Spring Expression Language
+- If you want to inject the value of a Spring Expression Language   `"#{value}"`
     - ![](img/03039.jpg)
 
 #### 3.5 Working with Command-Line Arguments
-- 
-    - 
+- Basic
+    - ![](img/03040.jpg)
+- Creating an object
+    - ![](img/03041.jpg)
+- Calling a static method 
+    - Basic of static method
+        - method that belongs to a class rather than an instance of a class
+        - not part of the objects it creates but is part of a class definition
+        - referenced by the class name and can be invoked without creating an object of class
+    - ![](img/03042.jpg)
         - 
-    - 
+- Accessing items within `array`s, `collection`s, and `map`s
+    - ![](img/03043.jpg)
+        - Creating a `list` and `map`
+            - ![](img/03044.jpg)
+        - Accessing `list` of `cities` and `map` of `currencies`
+            - ![](img/03045.jpg)
+- Accessing items with operators
+    - utilizing ***select all*** with `?[]` operator
+        - ![](img/03046.jpg)
+    - utilizing ***select first*** with `^[]` operator
+        - ![](img/03047.jpg)
+    - utilizing ***select last*** with `$[]` operator
+        - ![](img/03048.jpg)
+    - utilizing ***transform all*** with `![]` operator
+        - ![](img/03049.jpg)
+- Accessing parameters within an `@Autowire`
+    - ![](img/03050.jpg)
+        - `@Value` pulls the `user.name` from `systemProperties` and inserts it into method
+            - what is `@Autowired`
+
+#### 3.6 Working with Command-Line Arguments
+- Overview of CLI arguments and Spring Boot startup up
+    - ![](img/03051.jpg)
         - 
-- 
-    - 
-        - 
+- Accessing items with operators
     - 
         - 
 
