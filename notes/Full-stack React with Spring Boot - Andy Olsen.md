@@ -248,7 +248,7 @@
     - Avoid runtime error by making the maybe-not-there repo optional
         - ![](img/03027.jpg)
 
-#### 3.4 Using Spring Expression Language (SpEL)
+#### 3.4 Additional Autowiring Techniques
 - If you want a `collection` of repository (ie. a collection of PostgreSQL, MySQL, Oracle)
     - ![](img/03036.jpg)
 - If you have a `map` of repository
@@ -258,7 +258,7 @@
 - If you want to inject the value of a Spring Expression Language   `"#{value}"`
     - ![](img/03039.jpg)
 
-#### 3.5 Working with Command-Line Arguments
+#### 3.5 Using Spring Expression Language (SpEL)
 - Basic
     - ![](img/03040.jpg)
 - Creating an object
@@ -293,10 +293,46 @@
 #### 3.6 Working with Command-Line Arguments
 - Overview of CLI arguments and Spring Boot startup up
     - ![](img/03051.jpg)
-        - 
-- Accessing items with operators
-    - 
-        - 
+        - `args` passed in when `SpringApplication.run()` creates the beans
+- To access `args` FROM THE BEAN....
+    - must `@Autowired` with `(ApplicationArguments)`
+        - ![](img/03052.jpg)
+- Two types of CLI arguments
+    - Options
+        - ![](img/03053.jpg)
+            - consist of ... `--name` and `=value`
+        - ![](img/03054.jpg)
+            - actual value
+- Inputing command-line arguments with IntelliJ
+    - ![](img/03056.jpg)
+    - create a new configuration
+        - ![](img/03055.jpg)
+        - ![](img/03057.jpg)
+        - ![](img/03058.jpg)
+    - apply arguments
+        - ![](img/03059.jpg)
+        - ![](img/03060.jpg)
+- Accessing arguments within bean using these methods...
+    - `getSourceArgs()`
+        - gets raw arguments like `--target=windows`
+    - `getOptionNames()`
+        - gets names of option arguments 
+            - `--target=windows` returns `target`
+    - `getOptionValues()`
+        - gets values of option arguments 
+            - `--target=windows` returns `windows`
+    - `getNonOptionArgs()`
+        - all the values that didn't have a name
+            - `--target=windows --target=macOS --db=h2 wales 56` returns `wales 56`
+- Accessing arguments within
+    - `getSourceArgs()` with `--target=windows --target=macOS --db=h2 wales 56`
+        - ![](img/03061.jpg)
+    - `getOptionNames()` with `--target=windows --target=macOS --db=h2 wales 56`
+        - ![](img/03062.jpg)
+    - `getOptionValues()` with `--target=windows --target=macOS --db=h2 wales 56`
+        - ![](img/03063.jpg)
+    - `getNonOptionArgs()` with `--target=windows --target=macOS --db=h2 wales 56`
+        - ![](img/03064.jpg)
 
 ### Lesson 4: Configuration Classes
 #### 4.1 Defining a Configuration Class and Beans
