@@ -221,25 +221,32 @@
         - ![](img/03024.jpg)
     - Will need to qualify the dependency so that the Repo knows where to store data
         - ![](img/03025.jpg)
-- BankRepository
-    - ![](img/03028.jpg)
-- BankService
-    - ![](img/03029.jpg)
+- Code Breakdown
+    - BankRepository
+        - ![](img/03028.jpg)
+            - `BankRepositoryImpl` implements `BankRepository`, creating a single instance with `@Repository`
+            - Interface consist of `createAccount()`, `getBalance()`, `updateBalance()`, and `deleteAccount()`
+    - BankService
+        - ![](img/03029.jpg)
+            - Interface consist of `depositIntoAccount()`, `withdrawFromAccount()`, `transferFunds()`
+            - `BankServiceImpl` implements `BankService`, creating a single instance with `@Service`
+    - `@Autowired`
+        - stored within `BankServiceImpl`
+        - connects with `BankRepositoryImpl` bean
+- Injecting Dependencies into Fields
+    - ![](img/03030.jpg)
+        - if you need a bean to run and draw info from (dependency)...
+            - `@Autowired` that needed bean within
+        - ![](img/03033.jpg)
 - Injecting Dependencies into a Constructor
-    - 
-        - 
-    - 
-        - 
-- Injecting Dependencies into a Constructor
-    - 
-        - 
-    - 
-        - 
+    - ![](img/03031.jpg)
+        - ![](img/03032.jpg)
 - Qualifying Autowiring
     - ![](img/03026.jpg)
 - Optional Autowiring
     - Avoid runtime error by making the maybe-not-there repo optional
         - ![](img/03027.jpg)
+        - ![](img/03034.jpg)
 
 #### 3.4 Using Spring Expression Language (SpEL)
 - 
