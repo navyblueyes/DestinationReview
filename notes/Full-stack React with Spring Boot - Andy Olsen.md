@@ -243,22 +243,20 @@
         - ![](img/03032.jpg)
 - Qualifying Autowiring
     - ![](img/03026.jpg)
+        - ![](img/03034.jpg)
 - Optional Autowiring
     - Avoid runtime error by making the maybe-not-there repo optional
         - ![](img/03027.jpg)
-        - ![](img/03034.jpg)
 
 #### 3.4 Using Spring Expression Language (SpEL)
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- If you want a `collection` of repository (ie. a collection of PostgreSQL, MySQL, Oracle)
+    - ![](img/03036.jpg)
+- If you have a `map` of repository
+    - ![](img/03037.jpg)
+- If you want to inject the value of a variable, i.e. value of `name`
+    - ![](img/03038.jpg)
+- If you want to inject the value of a Spring Expression Language
+    - ![](img/03039.jpg)
 
 #### 3.5 Working with Command-Line Arguments
 - 
