@@ -400,36 +400,43 @@
     - In plain java
         - ![](img/04020.jpg)
             - class `TransactionManager` references class `DataSource` as `dataSource`
-- Technique 1 - specify source as a Bean within the confguration class
+- Technique 1 - specify source as a Bean within config class; activate within another bean
     - ![](img/04021.jpg)
         - Specified as a bean with `@Bean`
-        - called within the `transationManager1()` bean
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+        - called **within** the `transationManager1()` bean
+    - Running the code
+        - ![](img/04022.jpg)
+- Technique 2 - specify source as a Bean within config class; activate within bean parameter
+    - ![](img/04023.jpg)
 
 
 ### Lesson 5: Spring Boot Techniques
 #### 5.1 Setting Application Properties at the Command Line
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Purpose of application properties
+    - what is it
+        - the way to configure beans through passing parameters like...
+            - connection strings for databases
+            - names of message queues
+        - can be overwritten with command line
+    - why bother
+        - because you can run your application on a case-by-case scenario
+            - lets you change what database you are using
+    - where can it be defined
+        - ![](img/05001.jpg)
+            - application properties within CLI args overwrite those within the JAR
+- Basics of CLI args
+    - basics
+        - ![](img/05002.jpg)
+    - Doing it requires...
+        - Configuration
+            - ![](img/05003.jpg)
+                - Ensure to select the correct main class
+                    - ![](img/05004.jpg)
+                - Add your command line arguments
+                    - ![](img/05005.jpg)
+    - Testing it...
+        - ![](img/05006.jpg)
+            - `John Smith` is overwritten by command line argument of `Mary Jones`
 
 
 #### 5.2 Specifying which Properties File to Use
