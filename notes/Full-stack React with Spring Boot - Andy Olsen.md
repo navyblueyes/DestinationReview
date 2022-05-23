@@ -471,43 +471,84 @@
 
 
 #### 5.3 Defining YAML Properties Files
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Why YAML
+    - Great for...
+        - complex names for properties
+        - hierarchical property names
+    - What it looks like
+        - ![](img/05018.jpg)
+    - YAML compared to `application.properties`
+        - YAML
+            - ![](img/05019.jpg)
+        - `application.properties`
+            - ![](img/05020.jpg)
+- Inserting data from YAML into a bean
+    - Template
+        - ![](img/05021.jpg)
+        - ![](img/05022.jpg)
+            - NOTE!!! Requires this dependency
+                - ![](img/05025.jpg)
+                - should look like
+                    - ![](img/05026.jpg)
+    - Testing
+        - Calling for `contact.propertyName`
+            - ![](img/05023.jpg)
+        - Calling for `prefix="contact"` and then `tel` and `contact`
+            - ![](img/05024.jpg)
 
 
 #### 5.4 Using Spring Profiles
-- 
-    - 
+- Profile beans
+    - Great for...
+        - adapting between environments (development/production)
+        - adapting between connection strings
+    - What it looks like
+        - if you want a `MyBean4` in a Development and a Production environment
+            - ![](img/05027.jpg)
+    - Template
+        - ![](img/05028.jpg)
+        - ![](img/05029.jpg)
         - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Profile Properties
+    - What it looks like... in YAML
+        - ![](img/05030.jpg)
+            - notice the `---` divider
+- Setting Active Profile
+    - Overview
+        - ![](img/05031.jpg)
+    - Implementation
+        - Call for the `app4.properties` with `System.setProperty()`
+            - ![](img/05034.jpg)
+        - This is what is in the `app4.properties`
+            - ![](img/05033.jpg)
+        - This is what is pulled up
+            - ![](img/05032.jpg)
+        - See the results
+            - ![](img/05035.jpg)
 
 
 #### 5.5 Using Spring Boot Actuator
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
-
+- Overview
+    - ![](img/05036.jpg)
+- To add Actuator
+    - ![](img/05037.jpg)
+        - ![](img/05038.jpg)
+- To select how you want to see Actuator (endpoints)
+    - ![](img/05039.jpg)
+        - default...
+            - ![](img/05040.jpg)
+- Implement at `Application.java`
+    - ![](img/05041.jpg)
+- Running and viewing `localhost:8080/actuator/mappings`
+    - ![](img/05042.jpg)
+        - shows all `/endpoints` available with required/optional arguments
+- Running and viewing `localhost:8080/actuator/health`
+    - ![](img/05043.jpg)
+- Running and viewing `localhost:8080/actuator/metrics`
+    - returns directory 
+        - ![](img/05044.jpg)
+    - getting `process.uptime`
+        - ![](img/05045.jpg)
 
 ### Lesson 6: Integrating with Data Sources
 #### 6.1 Understanding Spring Data
