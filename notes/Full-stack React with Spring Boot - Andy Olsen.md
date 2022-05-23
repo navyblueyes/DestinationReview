@@ -336,49 +336,78 @@
 
 ### Lesson 4: Configuration Classes
 #### 4.1 Defining a Configuration Class and Beans
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Overview
+    - Typical operation
+        - ![](img/04001.jpg)
+            - Spring Boot scans for classes like this
+            - calls the default constructor
+            - 
+    - What if we want values inside the default constructor?
+        - Must utilize configuration classes (annotated with `@Configuration` with annotated methods of `@Bean`)
+            - ![](img/04002.jpg)
+    - Example
+        - ![](img/04003.jpg)
+            - `myBean` bean was created
+            - it is a `MyBean` type
+- Accessing beans
+    - call context and `.getBean()`
+        - ![](img/04004.jpg)
+    - `@autowired` to automatically get context within component
+        - ![](img/04005.jpg)
+            - ![](img/04006.jpg)
+
 #### 4.2 Locating Configuration Classes and Bean Methods
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Configuration classes
+    - components that are scanned at the start of a Spring boot startup
+        - ![](img/04010.jpg)
+    - you can tell SB to look in alternative packages to find components and config classes
+- Redirect to find comp / config 
+    - ![](img/04007.jpg)
+        - ![](img/04008.jpg)
+    - Alternatively... just give a parent folder
+        - ![](img/04009.jpg)
+- Defining beans within the Application class
+    - ![](img/04011.jpg)
+        - ![](img/04012.jpg)
+    - ideal for...
+        - small application where it would not make sense to create a configuration folder
+
 #### 4.3 Configuration Techniques
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Learning to create instances and to control...
+    - the name of those instances
+    - whether a singleton / prototype
+    - whether lazy / or not
+
+- Name with `@Bean(name="")`
+    - naming it
+        - ![](img/04013.jpg)
+    - get each of the declared 
+        - ![](img/04014.jpg)
+- singleton / prototype
+    - specified via `@Scope("prototype)`
+        - ![](img/04017.jpg)
+        - ![](img/04018.jpg)
+    - running it
+        - ![](img/04019.jpg)
+    - Note... if not specified ... scope is presumed to be singleton
+- lazy / or not
+    - specifying with `@Lazy`
+        - ![](img/04015.jpg)
+            - ![](img/04016.jpg)
+
 #### 4.4 Configuring Bean Dependencies
+- Scenario - pulling information from a datasource
+    - In plain java
+        - ![](img/04020.jpg)
+    - 
+        - 
 - 
     - 
         - 
     - 
         - 
-- 
-    - 
-        - 
-    - 
-        - 
+
+
 ### Lesson 5: Spring Boot Techniques
 #### 5.1 Setting Application Properties at the Command Line
 - 
@@ -391,6 +420,8 @@
         - 
     - 
         - 
+
+
 #### 5.2 Specifying which Properties File to Use
 - 
     - 
@@ -402,6 +433,8 @@
         - 
     - 
         - 
+
+
 #### 5.3 Defining YAML Properties Files
 - 
     - 
@@ -413,6 +446,8 @@
         - 
     - 
         - 
+
+
 #### 5.4 Using Spring Profiles
 - 
     - 
@@ -424,6 +459,8 @@
         - 
     - 
         - 
+
+
 #### 5.5 Using Spring Boot Actuator
 - 
     - 
@@ -435,6 +472,8 @@
         - 
     - 
         - 
+
+
 ### Lesson 6: Integrating with Data Sources
 #### 6.1 Understanding Spring Data
 - 
@@ -447,6 +486,8 @@
         - 
     - 
         - 
+
+
 #### 6.2 Getting Started with JPA
 - 
     - 
@@ -458,6 +499,8 @@
         - 
     - 
         - 
+
+
 #### 6.3 Configuring JPA in Spring Boot
 - 
     - 
@@ -469,6 +512,8 @@
         - 
     - 
         - 
+
+
 #### 6.4 Defining JPA Entity Classes
 - 
     - 
@@ -480,6 +525,8 @@
         - 
     - 
         - 
+
+
 #### 6.5 Seeding the Database with Sample Data
 - 
     - 
@@ -491,6 +538,8 @@
         - 
     - 
         - 
+
+
 #### 6.6 Viewing Database Data
 - 
     - 
@@ -502,6 +551,8 @@
         - 
     - 
         - 
+
+
 #### 6.7 Introducing the EntityManager Class
 - 
     - 
@@ -513,6 +564,8 @@
         - 
     - 
         - 
+
+
 #### 6.8 Using Query Methods in the EntityManager Class
 - 
     - 
