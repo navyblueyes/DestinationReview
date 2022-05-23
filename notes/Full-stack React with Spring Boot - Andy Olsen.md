@@ -440,16 +440,34 @@
 
 
 #### 5.2 Specifying which Properties File to Use
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Changing where Spring looks for properties files
+    - Places
+        - Prioritization
+            - ![](img/05007.jpg)
+        - Places
+            - `/config` folder on subdirectory of Java app
+                - ![](img/05010.jpg)
+            - Java App Directory
+                - ![](img/05009.jpg)
+            - `/config` folder on classpath
+                - ![](img/05008.jpg)
+            - root folder on class path
+                - ![](img/05011.jpg)
+    - Specifying another properties files OTHER THAN `application.properties`
+        - Overview
+            - ![](img/05012.jpg)
+                - this will look for `app2.properties` file 
+                - `"spring.config.name"` lets Spring know you are looking for a properties file
+            - Technique 2 -- environment variable
+                - `SPRING_CONFIG_NAME`
+            - Technique 3 -- command line argument
+                - ![](img/05015.jpg)
+        - Testing ... getting `Bill Jones` from `app2.properties` from the class path
+            - ![](img/05013.jpg)
+            - ![](img/05014.jpg)
+        - Testing ... getting `Bill Jones` from `app2.properties` from the CLI 
+            - ![](img/05016.jpg)
+            - ![](img/05017.jpg)
 
 
 #### 5.3 Defining YAML Properties Files
