@@ -399,6 +399,16 @@
 - Scenario - pulling information from a datasource
     - In plain java
         - ![](img/04020.jpg)
+            - class `TransactionManager` references class `DataSource` as `dataSource`
+- Technique 1 - specify source as a Bean within the confguration class
+    - ![](img/04021.jpg)
+        - Specified as a bean with `@Bean`
+        - called within the `transationManager1()` bean
+    - 
+        - 
+- 
+    - 
+        - 
     - 
         - 
 - 
