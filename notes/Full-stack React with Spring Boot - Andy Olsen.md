@@ -549,14 +549,35 @@
         - ![](img/05044.jpg)
     - getting `process.uptime`
         - ![](img/05045.jpg)
+--- 38 sections to go
 
 ### Lesson 6: Integrating with Data Sources
 #### 6.1 Understanding Spring Data
-- 
-    - 
+- Overview
+    - Using Spring Boot as a middle man for JPA
+        - intercepts transactional methods enroute to database
+        - handles exceptions with...
+            - commit transactions
+            - or roll back the transaction
+        - Achieved with an object, a special beam or sprint transaction manager
         - 
-    - 
-        - 
+    - Also manages the connection to the database
+        - normal connection
+            - requires some kind of authentication 
+                - takes time and resources
+        - with spring boot
+            - it maintains the connection to save resources
+                - within a connection pool
+    - Also simplifying CRUD and query database operations
+        - automatically figures out what SQL query 
+            - for getting data from the database
+            - and return an object with that data in it
+- Implementation
+    - add Maven dependency / database driver / JRE file
+        - on your class path
+    - example -- adding H2 driver...
+        - ![](img/05046.jpg)
+            - ![](img/06001.jpg)
 - 
     - 
         - 
