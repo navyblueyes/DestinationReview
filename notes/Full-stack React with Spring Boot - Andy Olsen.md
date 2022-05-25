@@ -578,24 +578,31 @@
     - example -- adding H2 driver...
         - ![](img/05046.jpg)
             - ![](img/06001.jpg)
-- 
-    - 
-        - 
-    - 
-        - 
-
 
 #### 6.2 Getting Started with JPA
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Basics
+    - ![](img/06002.jpg)
+        - requires Hibernate to better use the Java EE classes within JPA
+    - Entity class --- Database table
+        - each class is treated as a RDB table
+        - each property is treated as a RDB column
+    - **entity manager class**
+        - entity classes are manages by a **entity manager class**
+            - purpose - fetch / save entities to DB
+            - EM class has the CRUD methods for relational database operations
+    - **entity manager factory**
+        - creates the **entity manager class** for that specific database
+            - created automatically by spring
+- Implementation of JPA within Spring Boot
+    - ![](img/06003.jpg)
+        - ![](img/06004.jpg)
+    - ![](img/06005.jpg)
+    - When Spring Boot sees this dependency...
+        - creates several beans automatically in your application
+            - `DataSource` object for managing connection to DB designated in POM
+            - `JdbcTemplate` object for executing CRUD SQL statements
+            - `EntityManagerFactory` object for creating the entity manager... converting classes into SQL tables... and queries
+            - `PlatformTransactionManager` for managing any transactional method calls made by `EntityManager`
 
 
 #### 6.3 Configuring JPA in Spring Boot
