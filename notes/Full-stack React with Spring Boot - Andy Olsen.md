@@ -606,24 +606,31 @@
 
 
 #### 6.3 Configuring JPA in Spring Boot
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Required Properties 
+    - ![](img/06006.jpg)
+    - ![](img/06007.jpg)
+        - Normally set in `src/main/resources`
+        - ideally you would need to adjust settings for databases... but...
+            - Spring Boot can auto-config H2
+- If you need to customize the H2 connection...
+    - ![](img/06008.jpg)
+        - `create-drop`
+            - if Spring sees entity classes
+                - will create a table even if no data is available yet
+            - when Spring is at an end
+                - will drop the table
+        - `show_sql`
+            - shows sql commands and responses
 
 
 #### 6.4 Defining JPA Entity Classes
-- 
-    - 
-        - 
-    - 
-        - 
+- Review
+    - Entity Class
+        - maps to a database table
+    - To Create Entity Classes and map them to H2 database tables...
+        - ![](img/06009.jpg)
+    - Need Hibernate set to work with JPA
+        - ![](img/06010.jpg)
 - 
     - 
         - 
