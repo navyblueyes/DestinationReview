@@ -664,16 +664,28 @@
             - omit the `@GeneratedValue()`
             - must write script to insert item into DB
     - What it looks like
-        - ![](img/06019.jpg)
-
+        - implement properties (columns)
+            - ![](img/06019.jpg)
+        - implement methods
+            - ![](img/06020.jpg)
+        - overriding JPA methods to tailor to specific database
+            - tailoring `equal` method
+                - ![](img/06021.jpg)
+                    - `equal` returns a Boolean
+- Organizing Your Entity classes
+    - if your entities are NOT in the same folder as the `application.java`
+        - what it looks like if in same folder
+            - ![](img/06022.jpg)
+        - to tell Spring to look elsewhere...
+            - `@EntityScan`
+                - ![](img/06023.jpg)
+    
 
 #### 6.5 Seeding the Database with Sample Data
-- 
-    - 
-        - 
-    - 
-        - 
-- 
+- Review
+    - `jdbctemplate`
+        - used by Spring for generating SQL statements
+- Utilize `jdbctemplate`
     - 
         - 
     - 
