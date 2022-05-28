@@ -686,9 +686,9 @@
     - `jdbctemplate`
         - used by Spring for generating SQL statements
 - Utilize `jdbctemplate`
-    - 
-        - 
-    - 
+    - need to `@autowire` to the dependency to utilize
+        - ![](img/06024.jpg)
+    - need to `@PostConstruct`
         - 
 
 
