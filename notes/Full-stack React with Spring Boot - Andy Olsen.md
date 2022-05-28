@@ -631,11 +631,40 @@
         - ![](img/06009.jpg)
     - Need Hibernate set to work with JPA
         - ![](img/06010.jpg)
-- 
-    - 
-        - 
-    - 
-        - 
+            - remember `create-drop` destroys tables AFTER app closes
+- Defining an Entity Class
+    - `@Entity` to load entity framework
+        - ![](img/06011.jpg)
+    - `@Table` to specify the name of the table to be generated
+        - ![](img/06012.jpg)
+            - can be omitted IF...
+                - you want the table name TO MATCH EXACTLY to class name
+    - class properties WILL BECOME table columns
+        - ![](img/06013.jpg)
+            - types will become 
+    - `@Column()` to specify the name of the column to be generated
+        - ![](img/06014.jpg)
+            - instead of using `dosh` as the name of the column
+                - will use `salary` as name of column
+    - `@Id` to specify primary key column
+        - ![](img/06015.jpg)
+            - remember primary key MUST BE UNIQUE ... better for db to manage unique generation
+    - `@GeneratedValue` specifies that the DB generates the values IN THE COLUMN
+        - ![](img/06016.jpg)
+            - surrogate primary key - generating an id based on random number
+            - `strategy` refers to the DB's strategy; each DB has different strategies
+                - `GenerationType.IDENTITY` within H2 refers to auto-increment
+                    - each record added gets `previousValue+1`
+                    - stategies
+                        - ![](img/06017.jpg)
+                        - ![](img/06018.jpg)
+            - `-1` specifies dummy value; DB can replace
+        - alternative approach - natural primary key
+            - real-world values (SSN)
+            - omit the `@GeneratedValue()`
+            - must write script to insert item into DB
+    - What it looks like
+        - ![](img/06019.jpg)
 
 
 #### 6.5 Seeding the Database with Sample Data
