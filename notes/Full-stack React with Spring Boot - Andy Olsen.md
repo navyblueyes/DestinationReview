@@ -689,18 +689,44 @@
     - need to `@autowire` to the dependency to utilize
         - ![](img/06024.jpg)
     - need to `@PostConstruct`
-        - 
+        - ensures the entire library is loaded
+        - ![](img/06025.jpg)
+- javadoc --- docs.spring.io/spring-framework  jdbxtemplate.html
 
 
 #### 6.6 Viewing Database Data
-- 
+- Review
+    - `application.properties` holds the hibernate/jpa settings
+    - `@Entity` creates an Entity class
+    - `@Table` is used to specify a different table name from the class name
+    - `@Id` specifies the property to become the primary key attribute
+    - `@GeneratedValue` tells Spring to generate values based on specified `strategy`
+    - `@Column` specifies the a different column name instead of the property name
+    - Within application class
+        - we specify a service bean that contains the business methods
+            - ![](img/06026.jpg)
+        - it contains
+            - methods for queries
+            - methods for modifications
+-  Service bean
+    - `@Component` specifies that it is a component
+        - ![](img/06027.jpg)
+    - `Scanner(System.io)` looks for keyboard inputs
+        - ![](img/06028.jpg)
+    - `@Autowired` tells Spring to look for a repository / storage
+        - ![](img/06029.jpg)
+    - `queryEntities()` prompts for an employee id
+        - ![](img/06030.jpg)
+            - `promptForId()` asks for an employee `id`
+            - `repository.getEmployee(id)` looks for said `id`
+        - 
+            - 
+    - `displayEmployees()` returns all employees
+        - ![](img/06031.jpg)
+            - `reposity.getEmployees()` looks for ALL employees
     - 
         - 
-    - 
-        - 
-- 
-    - 
-        - 
+- Queries within Repository class
     - 
         - 
 
