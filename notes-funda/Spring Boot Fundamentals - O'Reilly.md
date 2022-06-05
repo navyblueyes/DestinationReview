@@ -1,4 +1,15 @@
+<!-- Start Document Outline -->
+
+* [Spring Boot Fundamentals - O'Reilly](#spring-boot-fundamentals---oreilly)
+	* [Module 1: A Simple Spring Model-View-Controller (MVC) Application](#module-1-a-simple-spring-model-view-controller-mvc-application)
+	* [Module 2: Using Spring to Access REST Services](#module-2-using-spring-to-access-rest-services)
+	* [Module 3: Persistence Mechanisms](#module-3-persistence-mechanisms)
+
+<!-- End Document Outline -->
+
 # Spring Boot Fundamentals - O'Reilly
+
+
 
 ## Module 1: A Simple Spring Model-View-Controller (MVC) Application
 ### Course Introduction
@@ -212,16 +223,23 @@
         - ![](img/01056.jpg)
 
 ### Creating a RESTful Web Service
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Modern day application
+    - Generate JSON for device
+    - Device receives JSON
+- Serializing a Greeting into JSON
+    - Greeting class
+        - ![](img/01057.jpg)
+    - `@RestController`
+        - ![](img/01058.jpg)
+    - create a `@RestController` class method of `greet`
+        - ![](img/01059.jpg)
+    - add mapping with `@GetMapping()`
+        - ![](img/01060.jpg)
+    - add request parameters with `@RequestParam`
+        - ![](img/01061.jpg)
+- Testing
+    - ![](img/01062.jpg)
+    - ![](img/01063.jpg)
 
 ### Testing RESTful Components
 - 
