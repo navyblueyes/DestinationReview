@@ -46,13 +46,29 @@
                     - `@tran`saction` near your method 
     - ![](img/01001.jpg)
     - ![](img/01003.jpg)
-        - 
-            - 
-                - 
-        - 
-            - 
-    - 
-    - 
+        - to perform declarative functions...
+            - must provide metadata
+                - users change it with `JavaConfig` beans
+                    - a way for users to define beans that Spring should be managing within application context
+                - users can modify components with `Annotation` beans
+                    - RESTcontrollers, repositories
+    - ![](img/01004.jpg)
+        - execution context where Spring loads beans
+            - access the beans through `ApplicationContext`
+    - ![](img/01005.jpg)
+        - Purpose
+            - create an easier way to create beans
+            - easier auto configure a new Spring
+        - Implementation
+            - requires either maven or gradle
+            - configure by filling out forms
+            - auto-builds an initial web app with desired database drivers
+        - easier configuration
+            - take a class
+            - serialize into json
+            - spring boot will automatically get class to JSON 
+    - ![](img/01006.jpg)
+        - IDE / spring tools suite / VScode
 
 ### Creating a New Application
 - 
