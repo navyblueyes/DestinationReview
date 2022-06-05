@@ -150,16 +150,16 @@
         - ![](img/01036.jpg)
 
 ### Add an Index Page
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Add an index page (`index.html`)
+    - ![](img/01037.jpg)
+        - ![](img/01038.jpg)
+    - ![](img/01039.jpg)
+        - ![](img/01040.jpg)
+- Outputting a Maven package
+    - ![](img/01041.jpg)
+        - ![](img/01042.jpg)
+- Deploying the maven package
+    - ![](img/01043.jpg)
 
 ### Testing Controllers Part I
 - 
