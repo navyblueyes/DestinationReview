@@ -119,14 +119,16 @@
     - Creating a controller
         - `@GetMapping` to associate a class with a specific route
             - ![](img/01025.jpg)
-        - `@RequestParam` to dictate required parameter `/hello?name=Mike`
+        - create a public class that takes a `String` and a view model (`Model`)
+            - ![](img/01044.jpg)
+                - note the types
+                    - `name` parameter is a `String` types
+                    - `model` output is a template model types
+        - modify the String parameter with `@RequestParam` to dictate required parameter `/hello?name=Mike`
             - ![](img/01026.jpg)
                 - `value` dictates name of the parameter
                 - `required` dictates requirement
                 - `defaultValue` shows what the default value will be for parameter
-            - note the types
-                - `name` parameter is a `String` types
-                - `model` output is a template model types
         - `return` a template from the `src/main/resources/templates`
             - ![](img/01027.jpg)
         - add `name` to the view model with `model.addAttribute()`
@@ -162,11 +164,15 @@
     - ![](img/01043.jpg)
 
 ### Testing Controllers Part I
-- 
-    - 
-        - 
-    - 
-        - 
+- Writing a JUnit test to invoke Controller class
+    - ![](img/01045.jpg)
+        - JUnit turns `sayHello` into a `@Test`
+        - `HelloController` is instantiated with `new HelloController()`
+        - utilize view-model by `BindingAwareModelMap()`
+            - Remember that `.sayHello` takes both a string and model
+                - need to create the model
+                    - ![](img/01046.jpg)
+        - utilize `assertAll` JUnit method to invoke all methods
 - 
     - 
         - 
