@@ -173,23 +173,43 @@
                 - need to create the model
                     - ![](img/01046.jpg)
         - utilize `assertAll` JUnit method to invoke all methods
-- 
-    - 
-        - 
-    - 
-        - 
+- Note
+    - Mockito
+        - mocks the interface to properly test all inputs
 
 ### Testing Controllers Part II
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Documentation Pattern
+    - Read the `Spring` doc
+        - Check if it is simplified within `Spring Boot`
+- Reading Documentation for Mocking Websites
+    - Looking for "mock" on the spring framework documentation
+        - ![](img/01047.jpg)
+    - Spring Documentation
+        - ![](img/01048.jpg)
+    - Spring Boot Documentation
+        - ![](img/01049.jpg)
+            - note that it 
+                - auto-configures theMVC
+                - looks for `@Controller` and NOT the `@Component`
+            - example from the documentation
+                - ![](img/01050.jpg)
+- Implementation 
+    - ![](img/01051.jpg)
+        - `@WebMvcTest()` looks for the `HelloController.class` for the test
+        - `@Autowired` tells Spring to check for `MockMvc` within `ApplicationContext`
+            - to test if it worked
+                - ![](img/01052.jpg)
+- Actual Test
+    - ![](img/01053.jpg)
+        - Call the MockMvc instance with `mvc` and run the `.perform(get("/hello"))`
+            - ensure the received is a HTML with `.accept(MediaType.TEXT_HTML)`
+        - have mockMvc check the `status`, `view`, `model` with `.andExpect()`
+        - in the second test... we insert a parameter with `mvc.paran("name","Dolly")`
+    - Notice that `MockMvcRequesBuilders` handles all the REST verbs
+        - ![](img/01054.jpg)
+    - Run the test
+        - ![](img/01055.jpg)
+        - ![](img/01056.jpg)
 
 ### Creating a RESTful Web Service
 - 
