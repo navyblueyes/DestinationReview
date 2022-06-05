@@ -131,26 +131,23 @@
             - ![](img/01027.jpg)
         - add `name` to the view model with `model.addAttribute()`
             - ![](img/01028.jpg)
+                - the viewmodel is `src/main/resources/templates/hello.html`
+                    - ![](img/01029.jpg)
 
 ### Adding a View
-- 
-    - 
+- Implementing a view
+    - Utilize ThymeLeaf with html
+        - ![](img/01030.jpg)
+- Running it 
+    - ![](img/01032.jpg)
+    - ![](img/01031.jpg)
+    - ![](img/01033.jpg)
         - 
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Configuring Java with `application.properties`
+    - modifying logging with `logging.level.web=debug`
+        - ![](img/01035.jpg)
+        - ![](img/01034.jpg)
+        - ![](img/01036.jpg)
 
 ### Add an Index Page
 - 
