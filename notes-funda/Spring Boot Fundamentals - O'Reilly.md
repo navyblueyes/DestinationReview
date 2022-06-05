@@ -71,19 +71,22 @@
         - IDE / spring tools suite / VScode
 
 ### Creating a New Application
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- ![](img/01007.jpg)
+    - IMPORTANT -- Spring Boot Version
+        - dictates what all dependencies look like
+            - ie... correct Hibernate and JBDC versions
+    - Java 11 - LTS for now
+        - WAR packaging for serving webpages
+        - JAR contains Tomcat for more flexibility with 
+- ![](img/01008.jpg)
+    - Dependencies - Spring Web
+        - ThymeLeaf for templating
+- ![](img/01009.jpg)
+    - Generate compiles dependencies into a `demo.zip`
+        - ![](img/01010.jpg)
 
 ### Importing into an Integrated Development Environment (IDE)
-- 
+- ![](img/01011.jpg)
     - 
         - 
     - 
