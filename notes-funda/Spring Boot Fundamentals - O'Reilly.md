@@ -98,18 +98,49 @@
         - ![](img/01017.jpg)
 
 ### Adding a Controller
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Purpose
+    - REST controller receives a request
+        - returns a destination
+- Creating a Controller
+    - Create a class at File Location --- sec/main/java/nameOfApplication
+        - ![](img/01018.jpg)
+    -  Name the new class
+        - ![](img/01019.jpg)
+            - ![](img/01020.jpg)
+    - Turn the class into a controller with `@Controller`
+        - ![](img/01021.jpg)
+            - ![](img/01022.jpg)
+    - Highlight the annotation to ascertain what is injected
+        - ![](img/01023.jpg)
+            - Notice it is a `@Component`
+    - Note that `@SpringBootApplication` within the main java is a `@ComponentScan`
+        - ![](img/01024.jpg)
+            - 
+    - Creating a controller
+        - `@GetMapping` to associate a class with a specific route
+            - ![](img/01025.jpg)
+        - `@RequestParam` to dictate required parameter `/hello?name=Mike`
+            - ![](img/01026.jpg)
+                - `value` dictates name of the parameter
+                - `required` dictates requirement
+                - `defaultValue` shows what the default value will be for parameter
+            - note the types
+                - `name` parameter is a `String` types
+                - `model` output is a template model types
+        - `return` a template from the `src/main/resources/templates`
+            - ![](img/01027.jpg)
+        - add `name` to the view model with `model.addAttribute()`
+            - ![](img/01028.jpg)
 
 ### Adding a View
+- 
+    - 
+        - 
+- 
+    - 
+        - 
+    - 
+        - 
 - 
     - 
         - 
