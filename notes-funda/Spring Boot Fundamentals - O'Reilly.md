@@ -87,15 +87,15 @@
 
 ### Importing into an Integrated Development Environment (IDE)
 - ![](img/01011.jpg)
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- ![](img/01012.jpg)
+- SpringToolSuite
+    - Getting the jar within
+        - ![](img/01013.jpg)
+        - ![](img/01014.jpg)
+        - ![](img/01015.jpg)
+    - Creating from scratch
+        - ![](img/01016.jpg)
+        - ![](img/01017.jpg)
 
 ### Adding a Controller
 - 
