@@ -242,16 +242,21 @@
     - ![](img/01063.jpg)
 
 ### Testing RESTful Components
-- 
-    - 
+- Will be using `TestRestTemplate`
+    - ![](img/01064.jpg)
         - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Running a test on REST Controller `HelloRestControllerFunctionalTest`
+    - Utilize a `@SpringBootTest` to create a test server with random port number
+        - ![](img/01065.jpg)
+    - Run two `@Test`, be sure to `@Autowired` the TestRestTemplate
+        - ![](img/01066.jpg)
+    - utilize the `TestRestTemplate` to turn `Greeting` into a JSON
+        - ![](img/01067.jpg)
+    - the `.getForEntity` adds more data into the JSON... ie headers and status code, content type
+        - ![](img/01069.jpg)
+            - ![](img/01068.jpg)
+            - notice we get the header, status code and content type
+            - notice it is no longer a `response`... but a `ResponseEntity`
 
 ### Module 1 Summary
 - 
