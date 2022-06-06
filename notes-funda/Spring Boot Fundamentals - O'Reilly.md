@@ -260,6 +260,7 @@
 
 
 ## Module 2: Using Spring to Access REST Services
+* [Go to Module 3](#module-3-persistence-mechanisms)
 
 ### The Spring Application Context
 - Application Context
@@ -396,36 +397,70 @@
     - testing
         - mostly the same; ensure to call the proper function
             - ![](img/02047.jpg)
-- 
-    - 
-        - 
-    - 
-        - 
 
 ### Accessing the Google Geocoder
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
-
-### Module 2 Summary
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
-
+- What is Geocoding
+    - Google definition
+        - ![](img/03001.jpg)
+    - Two Required Parameters to be aware
+        - ![](img/03002.jpg)
+        - ![](img/03003.jpg)
+    - Response
+        - ![](img/03004.jpg)
+            - ![](img/03005.jpg)
+                - Note the `lat` `lng`
+- Fitting Geocoding into Java
+    - Lat / Lng Java Class
+        - ![](img/03006.jpg)
+    - Geometry Class
+        - ![](img/03007.jpg)
+    - Result Class (takes Geometry and returns LatLng)
+        - ![](img/03008.jpg)
+    - Response Class (takes multiple results)
+        - ![](img/03009.jpg)
+    - Site Class 
+        - ![](img/03017.jpg)
+- Creating a Geocoder Service
+    - Creating a `@Service` bean
+        - ![](img/03010.jpg)
+    - `@Autowired` the `WebClient.Builder`
+        - ![](img/03011.jpg)
+    - Create a method to retrieve the geocode json and 
+        - `.collect()` the `Stream` of the input `address` in the `encoded`
+            - ![](img/03015.jpg)
+        - send the `encoded` in a `.retrieve()` request
+            - ![](img/03016.jpg)
+                - store the results within the `Response` format
+    - getting the results we want...
+        - to get the addresses...
+            - run `Result`'s `getFormattedAddress()` on the response first
+                - ![](img/03014.jpg)
+        - to get the lat / longd
+            - run `Geometry`'s `getLocation()`
+                - ![](img/03012.jpg)
+            - run `Location`'s `.getLat()` / `.getLng()`
+                - ![](img/03013.jpg)
+- Testing the service
+    - Writing the test
+        - the first test (merely name of a city)
+            - ![](img/03018.jpg)
+        - the second test (actual address)
+            - ![](img/03019.jpg)
+        - notice we call the logger AFTER EVER `site` call
+            - ![](img/03020.jpg)
+    - Results
+        - HTTP GET request sent
+            - ![](img/03021.jpg)
+        - Lat / Long3
+            - ![](img/03022.jpg)
+        - fixing the `address: null`
+            - difference in the documentation
+                - ![](img/03023.jpg)
+                - ![](img/03024.jpg)
+            - check the config.... (`application.properties`)
+                - ![](img/03025.jpg)
+        - getting the results
+            - ![](img/03026.jpg)
 
 
 ## Module 3: Persistence Mechanisms
