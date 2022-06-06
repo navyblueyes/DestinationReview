@@ -530,6 +530,36 @@
         - ![](img/03043.jpg)
 
 ### Defining the Entities and the Data Access Object (DAO) Interface
+- Maven POM
+    - starter
+        - ![](img/03044.jpg)
+    - dependencies
+        - ![](img/03045.jpg)
+    - plugins
+        - ![](img/03046.jpg)
+- Creating a DAO
+    - data structure of `id` `rank` `firstname` `lastName` 
+        - ![](img/03047.jpg)
+    - `rank` enum
+        -  ![](img/03048.jpg)
+    - three constructors
+        - ![](img/03049.jpg)
+            - empty to handle if NO PARAMETERS are included
+            - object WITHOUT `id` makes it easier for creating NEW classes
+            - object WITH `id` makes it easier for retrieving FROM DATABASE
+            - 
+    - getters/setters
+        - 
+    - making an interface
+        - ![](img/03050.jpg)
+            - `save()` takes an Officer and returns an Officer
+                - the difference; the returned Officer will have an `id` or primary key
+            - `findById()` takes an `id` and returns an OPTIONAL
+                - why OPTIONAL????  
+                    - just in case the returnee doesn't have an Officer
+            - `findAll()` returns all Officer
+            - `count()` return the number of rows
+            - `existsById()` takes an `id` and returns a `boolean`
 - 
     - 
         - 
