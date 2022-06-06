@@ -464,19 +464,52 @@
 
 
 ## Module 3: Persistence Mechanisms
-### Module 3 Introduction
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
 
 ### The JdbcTemplate Class
+- Why `JdbcTemplate`?
+    - want to pass SQL to database
+        - NOT want to convert rows into objects
+        - NOT want to convert objects into rows
+- Documentation
+    - ![](img/03027.jpg)
+    - ![](img/03028.jpg)
+        - Note that Jdbc will classify SQL exceptions as Data Access exceptions (3:25)
+    - ![](img/03029.jpg)
+- Query (4:17)
+    - `.queryForObject()`
+        - sends a SQL query and returns a class object
+    - SQL statement and the return class
+        - ![](img/03030.jpg)
+            - `.queryForObject()`
+                - first argument --> SQL statement
+                - second argument --> Target once converted
+    - SQL statement with a variable
+        - ![](img/03031.jpg)
+            - third argument --> variable to be inserted into the SQL statement
+    - Selecting a column based on `id`
+        - ![](img/03032.jpg)
+            - second argument --> type of the expected return
+            - third argument --> variable to be inserted into SQL statement
+    - Mapping through all the roes
+        - ![](img/03033.jpg)
+            - second argument --> row mapper interface
+                - lambda that takes the entire row (`rowset`) and row num (`rowNum`)
+                - lamda performs actions on each row
+                    - here we create a new `Actor` object with a `first_name` and `last_name`
+    - Querying multiple rows
+        - ![](img/03034.jpg)
+            - note!!! using `.query()` instead of `.queryForObject()`
+                - using `.query()` for returning an entire `resultSet`
+            - note!!! no third argument
+            - note!!! there is a type declaration at the beginning
+                - `List<Actor>`
+    - Better version -- abstracting the row mapper
+        - ![](img/03035.jpg)
+- Update
+    - 
+        - 
+    - 
+        - 
 - 
     - 
         - 
