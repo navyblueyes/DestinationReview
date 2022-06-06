@@ -506,32 +506,28 @@
     - Better version -- abstracting the row mapper
         - ![](img/03035.jpg)
 - Update
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+    - perfer not to use `.update` 
+        - does not return what is generated
+- Spring Boot way
+    - ![](img/03036.jpg)
 
 ### Creating a Test Database
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- From the very start
+    - Spring Initializer
+        - ![](img/03037.jpg)
+    - Dependencies - Spring JPA, H2 Database(JPA driver), 
+        - ![](img/03038.jpg)
+        - ![](img/03039.jpg)
+    - sql files within `src/main/resources/`
+        - ![](img/03040.jpg)
+    - Schema sql
+        - ![](img/03041.jpg)
+    - Inserting data sql
+        - ![](img/03042.jpg)
+    - Note
+        - Spring will EXECUTE BOTH ON STARTUP
+    - `application.properties` and logging
+        - ![](img/03043.jpg)
 
 ### Defining the Entities and the Data Access Object (DAO) Interface
 - 
