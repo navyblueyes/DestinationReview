@@ -258,56 +258,65 @@
             - notice we get the header, status code and content type
             - notice it is no longer a `response`... but a `ResponseEntity`
 
-### Module 1 Summary
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
-
-
 
 ## Module 2: Using Spring to Access REST Services
-### Module 2 Introduction
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
 
 ### The Spring Application Context
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Application Context
+    - auto wire your application context
+        - ![](img/02002.jpg)
+            - ![](img/02001.jpg)
+    - see what is in the application context 
+        - ![](img/02004.jpg)
+    - see all the beans with `.getBeanDefinitionCount()`
+        - ![](img/02005.jpg)
+            - ![](img/02006.jpg)
+        - ![](img/02007.jpg)
+    - If you change the controllers name with `@Controller(newName)`
+        - ![](img/02008.jpg)
+    - `Greeting.java` is NOT used in any part of the `ApplicationContext`
+        - therefore...
+            - never loaded
+        - if we put it in the test...
+            - ![](img/02009.jpg)
+        - to force `Greeting.java` to be used...
+            - before...
+                - ![](img/02010.jpg)
+            - after...
+                - ![](img/02011.jpg)
+- NOTE
+    - all objects within `ApplicationContext` are Singletons
+        - ![](img/02012.jpg)
+            - we thought we created two separate instances of `Greeting.class`
+                - instead...
+                    - `greeting2` is just a reference to `greeting1`
+    - ONLY WAY AROUND THIS... prototype it to be a factory
+        - with `@Scope`
 
 ### Adding Beans Using JavaConfig
-- 
+- Avoid `ApplicationContext` manipulation by setting configs with `JavaConfig`
     - 
         - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- `@SpringBootApplication` has a configuration
+    - Taking a look at the docs...
+        - ![](img/02013.jpg)
+            - ![](img/02014.jpg)
+    - Typical `@Configuration` setup
+        - ![](img/02015.jpg)
+            - annotate methods with an `@Bean` so that it would instantiates/configures that bean
+    - Since `@SpringBootApplication` is a `@Configuration`...
+        - ![](img/02016.jpg)
+    - Testing it...
+        - ![](img/02017.jpg)
+- Moving the configurations to its own file
+    - creating `AppConfig.java`
+        - ![](img/02018.jpg)
+    - Creating an alternate greeting
+        - ![](img/02019.jpg)
+            - ![](img/02020.jpg)
+    - Fixing the `expected single bean` error
+        - ![](img/02021.jpg)
+            - ![](img/02022.jpg)
 
 ### Spring's RestTemplate Class
 - 
