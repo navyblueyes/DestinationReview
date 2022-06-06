@@ -369,18 +369,33 @@
         - ![](img/02040.jpg)
     - Assert to check the results
         - ![](img/02041.jpg)
-- 
-    - 
-        - 
-    - 
-        - 
 
 ### Using the Reactive WebClient Class
-- 
-    - 
-        - 
-    - 
-        - 
+- Intro
+    - Reactive WebClient
+        - the modern version of `RestTemplate`
+    - What is it...
+        - ![](img/02042.jpg)
+            - an error won't stop the `ApplicationContext`
+            - an infinite wait won't slow down the application
+- `WebClient.ResponseSpec` `retrieve()`
+    - the docs...
+        - ![](img/02043.jpg)
+            - `.get()` acts like a GET html action
+            - `.uri("")` dictates route that calls get function
+            - `.accept()` dictates the anticipated file format
+            - `.retrieve()` executes get action
+            - `.bodyToMono()` converts JSON into Java class; name of java class is specified within `()`
+    - implementation
+        - instantiate a `WebClient`
+            - ![](img/02044.jpg)
+        - wire the `WebClient.Builder` and build it on the API address
+            - ![](img/02045.jpg)
+        - run the `retrieve()` library onto the `client`
+            - ![](img/02046.jpg)
+    - testing
+        - mostly the same; ensure to call the proper function
+            - ![](img/02047.jpg)
 - 
     - 
         - 
