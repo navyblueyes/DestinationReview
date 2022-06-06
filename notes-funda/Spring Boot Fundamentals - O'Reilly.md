@@ -319,11 +319,56 @@
             - ![](img/02022.jpg)
 
 ### Spring's RestTemplate Class
-- 
-    - 
-        - 
-    - 
-        - 
+- Intro
+    - Will run an API through RestTemplate
+        - the API source
+            - ![](img/02023.jpg)
+            - ![](img/02024.jpg)
+            - ![](img/02025.jpg)
+                - Note the `people: [ { "name": "asdf", "craft":"asdf" }, ...` format
+- Writing the API Fetcher
+    - Organizing JSON into Java
+        - Writing a POJO for the inbound data
+            - Setting up the data structure
+                - ![](img/02026.jpg)
+            - Establishing getters / setters
+                - ![](img/02027.jpg)
+        - Writing a POJO for the outbound data
+            - Data Structure
+                - ![](img/02030.jpg)
+            - Establishing getters / setters
+                - ![](img/02031.jpg)
+    - Creating a template
+        - templates are created using `RestTemplateBuilder`
+            - doc...
+                - ![](img/02028.jpg)
+            - implementation
+                - create a `RestTemplateBuilder` instance; call `.build()` method; insert into `template`
+                    - ![](img/02032.jpg)
+                - note the different methods that could be invoked
+                    - ![](img/02033.jpg)
+    - Calling API
+        - utilize the `.getForObject()` from the URL; put it into `AstroResult` data structure
+            - ![](img/02034.jpg)
+    - Create a service bean
+        - What is a service
+            - ![](img/02029.jpg)
+        - Implementation
+            - ![](img/02035.jpg)
+- Testing the API Fetcher
+    - Wire it to the API service bean
+        - ![](img/02036.jpg)
+    - Call the test method
+        - ![](img/02037.jpg)
+    - Within test method, call the service and store it
+        - ![](img/02038.jpg)
+    - Within test method, print out the numbers
+        - ![](img/02039.jpg)
+            - notice we are utilizing the `.getNumber()` getter
+    - Within test method, print out all the people
+        - ![](img/02040.jpg)
+    - Assert to check the results
+        - ![](img/02041.jpg)
 - 
     - 
         - 
