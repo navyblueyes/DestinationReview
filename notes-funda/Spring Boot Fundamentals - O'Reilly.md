@@ -478,6 +478,8 @@
 - Query (4:17)
     - `.queryForObject()`
         - sends a SQL query and returns a class object
+            - NOTE ---> throws error IF NOT RETURN EXACTLY ONE ROW
+                - ![](img/03060.jpg)
     - SQL statement and the return class
         - ![](img/03030.jpg)
             - `.queryForObject()`
@@ -560,28 +562,47 @@
             - `findAll()` returns all Officer
             - `count()` return the number of rows
             - `existsById()` takes an `id` and returns a `boolean`
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
 
 ### Implementing the DAO Layer
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Writing methods for each DAO method
+    - Be sure class implements the interface
+        - ![](img/03051.jpg)
+    - Implement the JdbcTemplate
+        - ![](img/03052.jpg)
+    - NOTE! in order to implement the wiring of the `JdbcTemplate`... need to be a Spring Managed bean
+        - ![](img/03053.jpg)
+        - ![](img/03054.jpg)
+            - `@Repository` makes it a Spring repository
+- `SimpleJdbcInsert`
+    - insert `JdbcTemplate`
+        - ![](img/03065.jpg)
+            - takes in `jdbcTemplate` and generates primary key
+            - returns the primary key
+    - tell it what table and what column needs the generated primary key
+        - ![](img/03067.jpg)
+    - abstract the `SimpleJdbcInsert` as `insertOfficer` for the entire program
+        - ![](img/03066.jpg)
+- Writing each method 
+    - count()
+        - ![](img/03056.jpg)
+    - delete()
+        - ![](img/03057.jpg)
+    - `existsById()`
+        - ![](img/03058.jpg)
+    - `findById()`
+        - ![](img/03059.jpg)
+            - we MUST return ONLY ONE ROW.... so...
+                - ![](img/03061.jpg)
+            - Notice we need three arguments
+                - ![](img/03062.jpg)
+        - Simplied version
+            - abstracted `officerMapper`
+                - ![](img/03063.jpg)
+            - implement abstract
+                - ![](img/03064.jpg)
+    - `save()`
+        - ![](img/03068.jpg)
+            - call the prior made `SimpleJdbcTemplate` and run the `.executeAndReturnKey()`
 
 ### Testing the DAO Layer
 - 
