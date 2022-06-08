@@ -653,16 +653,39 @@
             - ![](img/03081.jpg)
 
 ### The Java Persistence API (JPA) and Hibernate
-- 
+- Mapping to a Database Table using Hibernate
     - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+        - declare `@Entity`
+            - ![](img/03082.jpg)
+        - correct for the name of the actual database table with `@Table`
+            - ![](img/03083.jpg)
+        - remember that there must be a primary key
+            - identify primary key with `@Id` and self generate it with `@GeneratedValue`
+                - ![](img/03084.jpg)
+                    - ![](img/03085.jpg)
+        - take note of any `Enum`'s within the database
+            - ![](img/03086.jpg)
+                - the default enum type is `Ordinal` ... or the position within like
+                    - need to declare it as a string
+    - Working on the DAO
+        - auto wire for Jbdc database with `@Repository`
+            - ![](img/03093.jpg)
+        - create the Jpa entity manager and invoke `@PersistenceContext`
+            - ![](img/03094.jpg)
+                - you avoid creating a `entityManager` factory because of Singleton preference
+        - working on each method
+            - `save()` with Jpa `.persist()`
+                - ![](img/03092.jpg)
+            - `findById()` with Jpa `.find()`
+                - ![](img/03091.jpg)
+            - `findAll()` with Jpa `.createQuery()`
+                - ![](img/03089.jpg)
+            - `count()` with Jpa `.createQuery()`
+                - ![](img/03088.jpg)
+            - `delete()` with Jpa `.remove()`
+                - ![](img/03087.jpg)
+            - `existsById()` with Jpa `.createQuery()`
+                - ![](img/03090.jpg)
 
 ### Testing the JPA DAO Implementation
 - 
