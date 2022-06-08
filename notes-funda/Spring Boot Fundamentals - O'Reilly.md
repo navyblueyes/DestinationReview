@@ -595,7 +595,7 @@
                 - ![](img/03061.jpg)
             - Notice we need three arguments
                 - ![](img/03062.jpg)
-        - Simplied version
+        - Simplified version
             - abstracted `officerMapper`
                 - ![](img/03063.jpg)
             - implement abstract
@@ -605,16 +605,52 @@
             - call the prior made `SimpleJdbcTemplate` and run the `.executeAndReturnKey()`
 
 ### Testing the DAO Layer
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Hamcrest
+    - framework that assists writing software tests in the Java programming language
+        - supports customized assertion matchers
+        - allowing match rules to be defined declaratively
+- Spring Framework
+    - has a host of all sorts of tests
+        - assertJ
+        - Mockito
+- `@SpringBootTest`
+    - sets up JUnit test
+        - ![](img/03074.jpg)
+    - benefits - singleton application context
+        - does not restart
+        - maintains a single app context
+- Steps
+    - Utilize `@SpringBootTest`
+        - ![](img/03069.jpg)
+    - Autowire your DAO model
+        - ![](img/03070.jpg)
+    - testing `save()`
+        - ![](img/03071.jpg)
+    - testing `findById()` for an id we know is IN database
+        - ![](img/03072.jpg)
+    - testing `findById()` for an id we know is NOT IN database
+        - ![](img/03073.jpg)
+    - testing `count()` to check for five items in database
+        - ![](img/03075.jpg)
+    - testing `findAll()`
+        - ![](img/03076.jpg)
+            - note we are using `containsInAnyOrder()` from Hamcrest
+    - testing `delete()`
+        - ![](img/03077.jpg)
+            - note we check if it exists PRIOR to deleting
+            - note we check if database is empty by end
+                - make sure to use LAST
+    - testings if entries are in the table
+        - ![](img/03078.jpg)
+            - note the `rangeClosed` and `.forEach()`
+- Importance of `@Transactional`
+    - Before
+        - ![](img/03079.jpg)
+            - not all pass
+    - After
+        - ![](img/03080.jpg)
+            - `@Transactional` forces a roll back AFTER EACH TEST
+            - ![](img/03081.jpg)
 
 ### The Java Persistence API (JPA) and Hibernate
 - 
