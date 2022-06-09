@@ -774,9 +774,52 @@
         - ![](img/03114.jpg)
 
 ### The Spring Data JPA Project
-- 
-    - 
+- Getting to the docs
+    - Main page
+        - ![](img/03115.jpg)
+- Core concepts
+    - main interface -> `Repository` interface
+        - manages... 
+            - a generic for the entire class `<T>`
+            - a generic for the primary key `<ID>`
+    - improved --> `CrudReposity` interface
+        - ![](img/03116.jpg)    
+            - extends the `Repository` interface ... and adds...
+                - CRUD methods
+                    - `save()`
+                    - `findById()`
+                    - `findAll()`
+                    - `count()`
+                    - `delete()`
+                    - `existsById()`
+    - recommended --> `JpaRepository` interface (persistence+`Repository`)
+        - ![](img/03117.jpg)
+            - Notes
+                - notice that we declare the `Officer` class and the `Integer` primary key type
+            - What it looks like underneath
+                - ![](img/03118.jpg)
+                - ![](img/03119.jpg)
+                - ![](img/03120.jpg)
+                - ![](img/03121.jpg)
+                - ![](img/03122.jpg)
+- Implementation
+    - import spring test
+        - ![](img/03123.jpg)
+    - import the data model and Jdbc template
+        - ![](img/03124.jpg)
+    - create a private method of `getIds()` for later use
+        - ![](img/03125.jpg)
+    - test it 
+        - ![](img/03126.jpg)
+- Customization
+    - challenge - list of officers with `i` in their last name
+        - list of `<Officer>` type
+            - ![](img/03127.jpg)
+                - check the autocomplete of methods
+        - insert arguments and add types
+            - ![](img/03128.jpg)
         - 
+            - 
     - 
         - 
 - 
