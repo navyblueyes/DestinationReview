@@ -733,16 +733,45 @@
     - Hibernate wants every access to be in a transaction
 
 ### Transactions in Spring
-- 
-    - 
-        - 
-    - 
-        - 
-- 
-    - 
-        - 
-    - 
-        - 
+- Basic
+    - Spring will manage transaction
+    - Hibernate will manage persistence
+- Documentation for `@Transactional` within Spring
+    - Overall
+        - ![](img/03110.jpg)
+    - Optional Classes
+        - ![](img/03111.jpg)
+    - Isolation
+        - ![](img/03112.jpg)
+            - `READ_COMMITTED`
+                - ensure we see dedicated changes to table
+                    - phantom read - when someone added a row and reader isn't aware
+                        - only counter is row-lock 
+            - `READ_UNCOMMITTED`
+                - if someone rolls back a change... we might read the change
+            - `REPEATABLE_READ`
+                - row locked - quarenteed if row is read twice... will be same
+            - `SERIALIZABLE`
+                - each transaction is serialized... will know all prior actions
+    - Propagation
+        - dictates priority of certain methods
+            - `REQUIRED`
+                - if a transaction is in progress... join it
+                - if no transaction in progress... create a new
+            - `REQUIRES_NEW`
+                - if a transaction is in progress... suspend it and do your thing
+                    - when done, resume old transaction
+            - `SUPPORTS`
+                - if a transaction is in progress... join it
+                - if no transaction in progress... don't do anything
+                    - ideal for read-only
+    - `rollbackFor` / `noRollbackFor`
+        - dictates what should cause a rollback and what could be ignored
+- Implementation
+    - Only place transactional occur.... in your tests
+        - ![](img/03113.jpg)
+    - put your `enum`s within `@Transactional()`
+        - ![](img/03114.jpg)
 
 ### The Spring Data JPA Project
 - 
