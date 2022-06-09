@@ -654,7 +654,7 @@
 
 ### The Java Persistence API (JPA) and Hibernate
 - Mapping to a Database Table using Hibernate
-    - 
+    - java class just for mappling class to database table
         - declare `@Entity`
             - ![](img/03082.jpg)
         - correct for the name of the actual database table with `@Table`
@@ -688,16 +688,49 @@
                 - ![](img/03090.jpg)
 
 ### Testing the JPA DAO Implementation
-- 
-    - 
+- Steps
+    - Make sure entire test case is running `@SpringBootTest` and `@Transactional`
+        - ![](img/03095.jpg)
+            - SBT brings in testing dependencies
+            - T ensures each test is done in isolation
+    - Wire in your `dao` model
+        - ![](img/03096.jpg)
+    - Wire in your JdbcTemplate 
+        - ![](img/03097.jpg)
+            - to run SQL queries
+    - need to critical methods that will be reused throughout... `getIds`
+        - Be prepare to use row mapper / lambdas
+            - `getIds` should run a query with a row mapper
+                - ![](img/03098.jpg)
+    - test each critical database method
+        - testing `.save`
+            - ![](img/03099.jpg)
         - 
-    - 
+            - ![](img/03100.jpg)
         - 
-- 
-    - 
+            - ![](img/03101.jpg)
         - 
-    - 
+            - ![](img/03102.jpg)
         - 
+            - ![](img/03103.jpg)
+        - testing
+            - use Java's `.forEach()` to run `.existsById()` on each record
+                - ![](img/03104.jpg)
+    - Learning to use Hibernate
+        - test failure
+            - ![](img/03105.jpg)
+                - Hibernate wants to generate database schema from your domain model
+                - Hibernate looks at entity and recreates schema
+                    - unless told otherwise... Hibernate will OVERWRITE all test
+        - fixing Hibernate's default schema (`application.properties`)
+            - ![](img/03106.jpg)
+            - ![](img/03107.jpg)
+            - `create-drop` is default; needs to be changed to none
+                - ![](img/03109.jpg)
+        - telling Hibernate to use SQL
+            - ![](img/03108.jpg)
+- Transaction behavior
+    - Hibernate wants every access to be in a transaction
 
 ### Transactions in Spring
 - 
